@@ -42,7 +42,7 @@ const SignIn = () => {
         <Input  
           type='password'
           placeholder='Digite sua Senha'
-          value={email}
+          value={senha}
           onChange={(e) => [setSenha(e.target.value), setError('')]}
         />
         <C.labelError>{error}</C.labelError>
