@@ -3,9 +3,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SignIn from "../pages/SignIn/SignIn";
 import Home from "../pages/Home/Home";
 import SignUp from "../pages/SignUp/SignUp";
+import useAuth from "../hooks/useAuth";
 
 const Private = ({ Item }) => {
-    const signed = false
+    const { signed } = useAuth() 
 
     return signed > 0 ? <Item /> : <SignIn />
 }
